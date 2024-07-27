@@ -2,9 +2,9 @@ const { MessageEmbed } = require("discord.js");
 const ytsr = require('ytsr');
 module.exports = {
     name: 'play',
-    aliases: ['p'], // Optional
+    aliases: ['p'], 
     category: 'Music',
-    description: 'Play a song in the vc', 
+    description: 'Tocar una canción en el vc', 
     run: async (client, message, args) => {
         const voice_channel = message.member.voice.channel;
         const embed = new MessageEmbed()
@@ -17,10 +17,10 @@ module.exports = {
 
             const added = new MessageEmbed()
             .setColor('#85b0d2')
-            .setDescription(`Added **${song.name}** to the queue`)
+            .setDescription(`Agregado **${song.name}** a la cola`)
 
 
-            // If there were no errors the Player#songAdd event will fire and the song will not be null.
+           
             if(song)
                 message.channel.send(added);
             return;
@@ -31,7 +31,7 @@ module.exports = {
             .setColor('#85b0d2')
             .setDescription(`Empezando reproduccion **${song.name}**`)
 
-            // If there were no errors the Player#songAdd event will fire and the song will not be null.
+            
             if(song)
                 message.channel.send(started);
             return;

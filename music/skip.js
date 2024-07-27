@@ -1,23 +1,23 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-    name: 'skip', // Optional
-    aliases: ['sk'], // Optional
+    name: 'skip', 
+    aliases: ['sk'], 
     category: 'Music',
-    description: 'Skip the song that its playing.', 
+    description: 'Salta la canción que está sonando.', 
         run: async (client, message, args) => {
             const voice_channel = message.member.voice.channel;
             const embed = new MessageEmbed()
             .setColor('#FF5757')
-            .setDescription(`You need to be in a vc to execute this command!`)
+            .setDescription(`¡Necesitas estar en un vc para ejecutar este comando!`)
             if(!client.player.isPlaying(message)) {
-			message.channel.send('Unknow Radio must be playing in order to skip the track');
+			message.channel.send('Debe estar sonando radio desconocida para saltar la pista');
 
 			return;
 		}
 
 		await client.player.skip(message);
 
-		message.channel.send('Skipped');
+		message.channel.send('Saltado');
 	},
 };

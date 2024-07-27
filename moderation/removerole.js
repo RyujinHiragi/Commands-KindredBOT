@@ -4,7 +4,7 @@ module.exports = {
   name: "removerole",
   aliases: ["rmrole", "-role"],
   category: "moderation",
-  description: "Remove role from any user",
+  description: "Eliminar rol de cualquier usuario",
   run: async (client, message, args) => {
     
     let target = message.mentions.members.first();
@@ -13,7 +13,7 @@ module.exports = {
     
     let rrole = message.mentions.roles.first();
     
-    if(!rrole) return message.reply(`No puedo encontrar el papel`)
+    if(!rrole) return message.reply(`No puedo encontrar el rol`)
     
     let ticon = target.user.avatarURL({ dynamic: true, size: 2048 });
     let aicon = message.author.avatarURL({ dynamic: true, size: 2048 });
@@ -22,8 +22,8 @@ module.exports = {
       .setAuthor(target.user.username, ticon)
       .setThumbnail(target.user.displayAvatarURL({ dynamic: true }))
       .setColor("RANDOM")
-      .setDescription(`${rrole} role removed from ${target}`)
-      .setFooter(`Role added by ${message.author.username}`, aicon)
+      .setDescription(`${rrole} rol eliminado de ${target}`)
+      .setFooter(`Rol agregado por ${message.author.username}`, aicon)
       .setTimestamp()
       
       await message.channel.send(embed)

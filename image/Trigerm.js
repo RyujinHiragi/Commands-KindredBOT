@@ -3,7 +3,7 @@ const canvacord = require ("canvacord")
 const { MessageAttachment } = require("discord.js")
 module.exports= {
   name:"triggered",
-  description:"trigger some one",
+  description:"Enoja a alguien",
   category:"Image",
   aliases: ["tg"],
 run: async (client, message, args) => {

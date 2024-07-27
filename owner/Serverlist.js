@@ -5,14 +5,14 @@ module.exports = {
     name: "serverlist",
     aliases: ["slt"],
     category: "owner",
-    description: "Displays the list of Servers!",
+    description: "Muestra la lista de Servidores!",
     usage: " ",
 
   run: async (bot, message, args) => {
     if (message.author.id == ownerid) {
       if (!message.guild.me.hasPermission("ADMINISTRATOR"))
         return message.channel
-          .send("I Dont Have Permissions")
+          .send("No tengo permisos")
           .then(msg => msg.delete({ timeout: 5000 }));
 
       let i0 = 0;
@@ -20,11 +20,11 @@ module.exports = {
       let page = 1;
 
       let description =
-        `Total Servers - ${bot.guilds.cache.size}\n\n` +
+        `Servidores totales - ${bot.guilds.cache.size}\n\n` +
         bot.guilds.cache
           .sort((a, b) => b.memberCount - a.memberCount)
           .map(r => r)
-          .map((r, i) => `**${i + 1}** - ${r.name} | ${r.memberCount} Members\nID - ${r.id}`)
+          .map((r, i) => `**${i + 1}** - ${r.name} | ${r.memberCount} Miembros\nID - ${r.id}`)
           .slice(0, 10)
           .join("\n\n");
 
@@ -32,7 +32,7 @@ module.exports = {
         .setAuthor(bot.user.tag, bot.user.displayAvatarURL({dynamic : true}))
         
         .setColor("00FFFF")
-        .setFooter(`Page - ${page}/${Math.ceil(bot.guilds.cache.size / 10)}`)
+        .setFooter(`Pagina - ${page}/${Math.ceil(bot.guilds.cache.size / 10)}`)
         .setDescription(description);
 
       let msg = await message.channel.send(embed);
@@ -47,12 +47,12 @@ module.exports = {
 
       collector.on("collect", async (reaction, user) => {
         if (reaction._emoji.name === "⬅") {
-          // Updates variables
+          
           i0 = i0 - 10;
           i1 = i1 - 10;
           page = page - 1;
 
-          // if there is no guild to display, delete the message
+         
           if (i0 + 1 < 0) {
             console.log(i0)
             return msg.delete();
@@ -71,24 +71,24 @@ module.exports = {
               .slice(i0, i1)
               .join("\n\n");
 
-          // Update the embed with new informations
+          
           embed
             .setFooter(
-              `Page - ${page}/${Math.round(bot.guilds.cache.size / 10 + 1)}`
+              `Pagina - ${page}/${Math.round(bot.guilds.cache.size / 10 + 1)}`
             )
             .setDescription(description);
 
-          // Edit the message
+         
           msg.edit(embed);
         }
 
         if (reaction._emoji.name === "➡") {
-          // Updates variables
+          
           i0 = i0 + 10;
           i1 = i1 + 10;
           page = page + 1;
 
-          // if there is no guild to display, delete the message
+          
           if (i1 > bot.guilds.cache.size + 10) {
             return msg.delete();
           }
@@ -106,14 +106,14 @@ module.exports = {
               .slice(i0, i1)
               .join("\n\n");
 
-          // Update the embed with new informations
+          
           embed
             .setFooter(
-              `Page - ${page}/${Math.round(bot.guilds.cache.size / 10 + 1)}`
+              `Pagina - ${page}/${Math.round(bot.guilds.cache.size / 10 + 1)}`
             )
             .setDescription(description);
 
-          // Edit the message
+         
           msg.edit(embed);
         }
 
@@ -121,7 +121,7 @@ module.exports = {
           return msg.delete();
         }
 
-        // Remove the reaction when the user react to the message
+        
         await reaction.users.remove(message.author.id);
       });
     } else {

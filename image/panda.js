@@ -6,7 +6,7 @@ module.exports = {
   name: "panda",
   aliases: ["pandaa"],
   category: "Image",
-  description: "Return A Random Panda!",
+  description: "¡Devuelve un panda al azar!",
   usage: "Panda",
   run: async (client, message, args) => {
     

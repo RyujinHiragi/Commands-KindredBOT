@@ -24,7 +24,7 @@ module.exports = {
     let reason = args.slice(1).join("");
 
     if (!reason) {
-      return message.channel.send(" \``` por favor da alguna razón para silenciar\``` ");
+      return message.channel.send(" \``` Por favor da alguna razón para silenciar\``` ");
     }
 
     const vrole = user.roles.cache
@@ -32,17 +32,17 @@ module.exports = {
     let muterole = message.guild.roles.cache.find(x => x.name === "muted");
 
     if (!muterole) {
-      return message.channel.send("\```por favor cree un nombre de rol llamdo muted\``` ");
+      return message.channel.send("\```Por favor cree un nombre de rol llamdo muted\``` ");
     }
     
     await user.roles.remove(vrole);
     await user.roles.add(muterole);
 
     await message.channel.send(
-      `you muted ${message.mentions.users.first().username} for ${reason}`
+      `Te silenciaron ${message.mentions.users.first().username} por ${reason}`
     );
 
-    user.send(`You get muted in ${message.guild} for ${reason}`
+    user.send(`Te silenciaron ${message.guild} por ${reason}`
     );
   }
 };

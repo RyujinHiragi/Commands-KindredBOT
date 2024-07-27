@@ -6,7 +6,6 @@ module.exports = {
   aliases: ['clear', 'delete', 'prune'],
 
   async run(bot, message, args) {
-// UPDATE ^ ACCORDING TO YOUR HANDLER
 let prefix = "q"
  try { 
  

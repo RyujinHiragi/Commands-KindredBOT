@@ -1,18 +1,18 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-    name: 'clear', // Optional
-    aliases: ['clearqueue', 'clear-queue'], // Optional
+    name: 'clear', 
+    aliases: ['clearqueue', 'clear-queue'], 
     category: 'Music',
-    description: 'Clears the queue', 
+    description: 'Limpia la cola',
     run: async (client, message, args) => {
         const voice_channel = message.member.voice.channel;
         const embed = new MessageEmbed()
         .setColor('#FF5757')
-        .setDescription(`You need to be in a vc to execute this command!`)
+        .setDescription(`¡Necesitas estar en un vc para ejecutar este comando!`)
         const embed1 = new MessageEmbed()
         .setColor('#85b0d2')
-        .setDescription('Queue was cleared!')
+        .setDescription('Se borró la cola!')
         if (!voice_channel) return message.channel.send(embed);
         let isDone = client.player.clearQueue(message);
         if(isDone)

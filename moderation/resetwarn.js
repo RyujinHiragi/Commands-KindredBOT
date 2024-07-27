@@ -5,7 +5,7 @@ module.exports = {
   aliases: ["rwarns", "rsetwarns"],
   category: "moderation",
   usage: "rwarns <@user>",
-  description: "Reset warnings of mentioned person",
+  description: "Restablecer advertencias de la persona mencionada.",
   run: async (client, message, args) => {
     if (!message.member.hasPermission("ADMINISTRATOR")) {
       return message.channel.send(

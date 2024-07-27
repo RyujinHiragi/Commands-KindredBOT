@@ -1,17 +1,16 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 const Color = `RANDOM`;
-const Fetch = require("node-fetch"); //Install Node-fetch - npm i node-fetch
+const Fetch = require("node-fetch"); //intala Node-fetch - npm i node-fetch
 
 module.exports = {
     name: "meme",
     category: "fun",
-    description: "Send A Meme!",
+    description: "¡Envía un meme!",
     usage: "Meme",
     run: async (client, message, args) => {
 
-        //Start
-
+        
         const Reds = [
             "memes",
             "me_irl",
@@ -41,7 +40,6 @@ module.exports = {
 
         return message.channel.send(Embed);
 
-        //End
 
     }
 };

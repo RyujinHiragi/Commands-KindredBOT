@@ -16,10 +16,10 @@ module.exports = {
       return message.channel.send("Por favor mencione el canal primero.")
     }
     
-    //Now we gonna use quick.db
+    
     
     db.set(`welchannel_${message.guild.id}`, channel.id)
     
-    message.channel.send(`Welcome Channel is seted as ${channel}`)
+    message.channel.send(`El canal de bienvenida está configurado como ${channel}`)
   }
 }

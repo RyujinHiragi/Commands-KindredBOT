@@ -1,10 +1,10 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-    name: 'join', // Optional
-    aliases: [], // Optional
+    name: 'join',
+    aliases: [], 
     category: 'Music',
-    description: 'Join the voice channel!', 
+    description: 'Únete al canal de voz!', 
         run: async (client, message, args) => {
             const voiceChannel = message.member.voice.channel;
             const embed = new MessageEmbed()

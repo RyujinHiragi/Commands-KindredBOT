@@ -5,7 +5,7 @@ const random = new Random();
 module.exports = {
   name: "hug",
   category: "fun",
-  description: "Hug someone",
+  description: "Abrazar a alguien",
   run: async (client, message, args) => {
     
     let target = message.mentions.members.first()

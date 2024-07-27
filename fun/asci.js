@@ -6,16 +6,16 @@ module.exports = {
     aliases: [],
     category: "fun",
     usage: "ascii <text>",
-    description: "Returns provided text in ascii format.",
+    description: "Devuelve el texto proporcionado en formato ascii.",
     run: async (client, message, args) => {
 
    let text = args.join(" ");
    if(!text) {
-return message.channel.send(`Please provide text for the ascii conversion!`)
+return message.channel.send(`¡Proporcione texto para la conversión ascii!`)
 }
    let maxlen = 20
 if(text.length > 20) {
-return message.channel.send(`Please put text that has 20 characters or less because the conversion won't be good!`)
+return message.channel.send(`¡Ingrese texto que tenga 20 caracteres o menos porque la conversión no será buena!`)
 }
         
 figlet(text, function(err, data) {

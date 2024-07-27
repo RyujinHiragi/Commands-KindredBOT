@@ -1,15 +1,15 @@
 const { MessageEmbed } = require('discord.js')
 
 module.exports = {
-    name: 'nowplaying', // Optional
-    aliases: ['np'], // Optional
+    name: 'nowplaying', 
+    aliases: ['np'], 
     category: 'Music',
-    description: 'Gives info about the song that its being played and the progress of it', 
+    description: 'Da información sobre la canción que se está reproduciendo y su progreso.', 
     run: async (client, message, args) => {
             const voice_channel = message.member.voice.channel;
             const embed = new MessageEmbed()
             .setColor('#FF5757')
-            .setDescription(`You need to be in a vc to execute this command!`)
+            .setDescription(`¡Necesitas estar en un vc para ejecutar este comando!`)
             if (!voice_channel) return message.channel.send(embed);
             let progressBar = client.player.createProgressBar(message, {
                 size: 20,

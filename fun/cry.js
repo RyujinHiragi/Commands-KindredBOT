@@ -5,7 +5,7 @@ const random = new Random();
 module.exports = {
   name: "cry",
   category: "fun",
-  description: "Cry with gif",
+  description: "Llorar con gif",
   run: async (client, message, args) => {
     
     let data = await random.getAnimeImgURL("cry");
@@ -13,7 +13,7 @@ module.exports = {
     let embed = new discord.MessageEmbed()
     .setImage(data)
     .setColor("RANDOM")
-    .setFooter(`Please talk with ${message.author.username} they are crying`)
+    .setFooter(`Por favor habla con ${message.author.username} estan llorando`)
     .setTimestamp()
     
     message.channel.send(embed);

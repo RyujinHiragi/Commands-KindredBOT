@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "achievement",
-  description: "Gives you an achievment",
+  description: "Te da un logro",
   aliases: ["ach"],
   category: "Image",
   run: async (client, message, args) => {

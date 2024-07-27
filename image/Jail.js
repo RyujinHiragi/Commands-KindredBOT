@@ -5,7 +5,7 @@ module.exports = {
   name: "jail",
   aliases: ["j"],
   category: "Image",
-  description: "Shows image of jail",
+  description: "Muestra imagen de la cárcel",
   usage: "jail <user>",
   run: async (client, message, args) => {
     

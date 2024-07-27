@@ -5,7 +5,7 @@ description: "`Show detailed stats of bot`",
 category: "owner",
 aliases: ["detail"],
 run: async (client, message, args, level) => {
-//command
+
   if(message.author.id != 852219497763045398){
     const noperms = new MessageEmbed()
     .setDescription("<:astroz_wrong:825598313499459605> This Command Only Use By My Owner **NPG** ")
@@ -37,7 +37,7 @@ let uptime = `\`\`\`${days} days, ${hours} hours, ${minutes} minutes and ${secon
 let embed = new MessageEmbed()
 
 .setTitle(`**[Support Server]**`)
-  .setDescription(`Hey My name is **${message.client.user.username}** and My Work is fun mode etc.`)
+  .setDescription(`Hola, mi nombre es **${message.client.user.username}** y Mi trabajo es modo divertido, etc..`)
 
   .setTitle(`${message.client.user.username} Stats`)
   .addFields(
@@ -50,11 +50,11 @@ let embed = new MessageEmbed()
     { name: "<a:Owner:822760998938869760> Bot Owner:",value: `\`\`\`NPG\`\`\``},
   )
   .setColor("3498DB")
-  .setFooter("Thx For Choosing automodbot")  
+  .setFooter("Gracias por elegir automodbot")  
 
 return message.channel.send(embed);
     return message.react("<:astroz_correct:825597747800309770>");
 }
 };
 
-console.log("stats working")
+console.log("estadísticas funcionando")

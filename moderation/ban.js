@@ -37,7 +37,7 @@ module.exports = {
       message.delete()
       
     } else {
-      return message.reply(`No puedo prohibirlos, asegúrate de que mi papel esté por encima del de ellos.`)
+      return message.reply(`No puedo prohibirlos, asegúrate de que mi rol esté por encima del de ellos.`)
     }
     return undefined
   }

@@ -5,7 +5,7 @@ module.exports = {
   name: "rip",
   aliases: ["died", ""],
   category: "Image",
-  description: "Shows RIP create with user avatar",
+  description: "Muestra la creación de RIP con el avatar del usuario.",
   usage: "rip <user>",
   run: async (client, message, args) => {
     

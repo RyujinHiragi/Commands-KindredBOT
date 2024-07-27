@@ -1,10 +1,10 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-    name: 'leave', // Optional
-    aliases: [], // Optional
+    name: 'leave',
+    aliases: [], 
     category: 'Music',
-    description: 'Leaves the voice channel!', 
+    description: '¡Deja el canal de voz!', 
         
         run: async (client, message, args) => {
             const voiceChannel = message.member.voice.channel;
@@ -13,7 +13,7 @@ module.exports = {
             .setDescription(`Necesitas es`)
             if(!voiceChannel) return message.channel.send(embed)
             voiceChannel.leave()
-            message.react('🪐')
+            message.react('')
               
           }
 }

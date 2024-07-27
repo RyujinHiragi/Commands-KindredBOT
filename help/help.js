@@ -1,3 +1,5 @@
+//Aqui tambien cambie todo lo que dice Kindred Bot, le quite la marca de agua para que no lo joda eso 
+
 const ButtonPages = require('discord-button-pages');
 const { MessageEmbed } = require('discord.js')
 const disbutpages = require("discord-embeds-pages-buttons")
@@ -8,7 +10,7 @@ const MessageButton = require("discord-buttons");
 module.exports = {
   name: "help",
   description:
-    "Get list of all command and even get to know every command detials",
+    "Obtenga una lista de todos los comandos e incluso conozca todos los detalles de los comandos",
   usage: "help <cmd>",
   category: "info",
   run: async (client, message, args) => {

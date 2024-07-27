@@ -6,7 +6,7 @@ module.exports = {
   name: "slap",
   aliases: ["batmanslap", "slp"],
   category: "Image",
-  description: "Return A Slap Image!",
+  description: "¡Devuelve una imagen de bofetada!",
   usage: "Slap <Mention Or ID> | <Text>",
   run: async (client, message, args) => {
     

@@ -6,10 +6,10 @@ const neko = new client();
 module.exports = {
     name: "fact",
     category: "fun",
-  description: "sends a cool fact",
+  description: "Envía un hecho interesante",
   usage: "[command]",
   run: async (client, message, args) => {
-  //command
+  
 
     async function work() {
 

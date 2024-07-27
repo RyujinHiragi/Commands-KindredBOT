@@ -10,13 +10,13 @@ module.exports = {
         accessableby: "everyone"
     ,
     run: async (bot, message, args) => {
-        if (!message.guild.me.hasPermission('ATTACH_FILES')) return message.channel.send("**Missing Permissions - [ATTACH_FILES]!**");
-        if (!args[0]) return message.channel.send("**Which User Would You Like To Be The Base?**");
-        if (!args[1]) return message.channel.send("**Which User Would You Like To Put Over The Base?**");
+        if (!message.guild.me.hasPermission('ATTACH_FILES')) return message.channel.send("**Memitiendo permisos - [ATTACH_FILES]!**");
+        if (!args[0]) return message.channel.send("**¿Qué usuario te gustaría ser la base?**");
+        if (!args[1]) return message.channel.send("**¿Qué usuario le gustaría poner sobre la base?**");
         let base = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args[0].toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName === args[0].toLocaleLowerCase());
-        if (!base) return message.channel.send("**Base User Not Found!**");
+        if (!base) return message.channel.send("**¡Usuario base no encontrado!**");
         let overlay = message.mentions.members.first(2)[1] || message.guild.members.cache.get(args[1]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args[1].toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName === args[1].toLocaleLowerCase());
-        if (!overlay) return message.channel.send("**Overlay User Not Found!**");
+        if (!overlay) return message.channel.send("**¡Usuario superpuesto no encontrado!**");
         const baseAvatarURL = base.user.displayAvatarURL({ format: 'png', size: 512 });
         const overlayAvatarURL = overlay.user.displayAvatarURL({ format: 'png', size: 512 });
         try {
@@ -31,7 +31,7 @@ module.exports = {
             ctx.drawImage(overlayAvatar, 0, 0, baseAvatar.width, baseAvatar.height);
             return message.channel.send({ files: [{ attachment: canvas.toBuffer(), name: 'avatarfusion.png' }] });
         } catch (err) {
-            return message.channel.send(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
+            return message.channel.send(`Oh no, ocurrió un error: \`${err.message}\`. ¡Inténtalo de nuevo más tarde!`);
         };
     }
 };

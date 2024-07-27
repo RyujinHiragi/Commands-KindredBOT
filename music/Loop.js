@@ -1,21 +1,21 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-    name: 'loop', // Optional
-    aliases: [], // Optional
+    name: 'loop', 
+    aliases: [], 
     category: 'Music',
-    description: 'Loop the queue', 
+    description: 'hacer un bucle en la cola', 
     run: async (client, message, args) => {
             const voice_channel = message.member.voice.channel;
             const embed = new MessageEmbed()
             .setColor('#FF5757')
-            .setDescription(`You need to be in a vc to execute this command!`)
+            .setDescription(`¡Necesitas estar en un vc para ejecutar este comando!`)
             if (!voice_channel) return message.channel.send(embed);
-            // Enable repeat mode
+            
             let status = client.player.setQueueRepeatMode(message, true);
             const loop = new MessageEmbed()
             .setColor('#85b0d2')
-            .setDescription(`Queue will be repeated indefinitely!`)
+            .setDescription(`¡La cola se repetirá indefinidamente!`)
             if(status === null)
             return;
             message.channel.send(loop);

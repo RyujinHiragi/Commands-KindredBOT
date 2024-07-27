@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 module.exports = {
   name: "affect",
   category: "Image",
-  description: "get affected, REALLY AFFECTED",
+  description: "verse afectado, REALMENTE AFECTADO",
   usage: "jail <user>",
   run: async (client, message, args) => {
     

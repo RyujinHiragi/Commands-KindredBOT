@@ -1,14 +1,16 @@
+//Si lo va a utilizar cambie las cosas porque si no los mensajes de error me llegan a mi xdddd
+
 const discord = require("discord.js");
 module.exports = {
   name: "bug",
   category: "moderation",
   args: true,
   description:
-    "Please specify the bug. Example:\n`punch isn't working. It isn't mentioning the user I'm trying to punch`",
+    "Por favor especifique el error. Ejemplo:\n`el punzonado no funciona. No menciona al usuario al que estoy intentando golpear.`",
   usage:
-    "Please specify the bug. Example:\n`punch isn't working. It isn't mentioning the user I'm trying to punch`",
+    "Por favor especifique el error. Ejemplo:\n`el punzonado no funciona. No menciona al usuario al que estoy intentando golpear.`",
   run: async (client, message, args) => {
-    // again make this fit your command handler style 😀
+    
     args = args.join(" ");
     const channels = message.channel;
     let check;

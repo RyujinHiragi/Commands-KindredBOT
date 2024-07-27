@@ -5,7 +5,7 @@ module.exports = {
   name: "addrole",
   aliases: ["role", "qrole"],
   category: "moderation",
-  description: "Add role to any user",
+  description: "Agregar rol a cualquier usuario",
 run: async (bot, message, args) => {
 
         if (!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("**No tienes permisos para agregar roles a los usuarios - [MANAGE_ROLES]**");
@@ -25,7 +25,7 @@ run: async (bot, message, args) => {
         if (role.managed) return message.channel.send("**No se puede agregar ese papel al usuario**")
         if (message.guild.me.roles.highest.comparePositionTo(role) <= 0) return message.channel.send('**El rol es actualmente superior al mío, por lo tanto, no puedo agregarlo al usuario.**')
 
-        if (rMember.roles.cache.has(role.id)) return message.channel.send("**El usuario ya tiene el papel**")
+        if (rMember.roles.cache.has(role.id)) return message.channel.send("**El usuario ya tiene el rol**")
         if (!rMember.roles.cache.has(role.id)) await rMember.roles.add(role.id);
         var sembed = new MessageEmbed()
             .setColor("GREEN")

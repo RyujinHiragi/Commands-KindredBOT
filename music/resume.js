@@ -1,20 +1,20 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-    name: 'resume', // Optional
-    aliases: ['resume'], // Optional
+    name: 'resume', 
+    aliases: ['resume'], 
     category: 'Music',
-    description: 'Resume the song that was paused', 
+    description: 'Reanudar la canción que estaba pausada.', 
     run: async (client, message, args) => {
             const voice_channel = message.member.voice.channel;
             const embed = new MessageEmbed()
             .setColor('#FF5757')
-            .setDescription(`You need to be in a vc to execute this command!`)
+            .setDescription(`¡Necesitas estar en un vc para ejecutar este comando!`)
             if (!voice_channel) return message.channel.send(embed);
             let song = client.player.resume(message);
             const resume = new MessageEmbed()
             .setColor('#85b0d2')
-            .setDescription(`**${song.name}** was resumed!`)
+            .setDescription(`**${song.name}** ¡Se reanudó!`)
             if(song)
             message.channel.send(resume);
     }

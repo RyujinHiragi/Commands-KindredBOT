@@ -48,20 +48,20 @@ module.exports = {
     if (warnings === null) {
       db.set(`warnings_${message.guild.id}_${user.id}`, 1);
       user.send(
-        `You have been warned in **${message.guild.name}** for ${reason}`
+        `Has sido advertido en **${message.guild.name}** for ${reason}`
       );
       await message.channel.send(
-        `You warned **${
+        `Has sido advertido **${
           message.mentions.users.first().username
         }** for ${reason}`
       );
     } else if(warnings !== null) {
       
-      db.add(`warnings_${message.guild.id}_${user.id}`, 1);
+      db.add(`advertencias_${message.guild.id}_${user.id}`, 1);
       
-      user.send(`You have been warned in **${message.guild.name}**  ${reason}`);
+      user.send(`Has sido advertido en **${message.guild.name}**  ${reason}`);
       
-      await message.channel.send(`You warned **${message.mentions.users.first().username}**  ${reason}`);
+      await message.channel.send(`Has sido advertido **${message.mentions.users.first().username}**  ${reason}`);
       
       message.delete
       

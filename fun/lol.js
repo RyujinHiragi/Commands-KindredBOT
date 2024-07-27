@@ -6,12 +6,12 @@ module.exports = {
   name: "emojiadd",
   category: "moderation",
   usage: "stealemoji <emoji> <custom name>",
-  description: "Steal an emoji from a different server",
+  description: "Robar un emoji de un servidor diferente",
   botPermissions: ["MANAGE_EMOJIS"],
   memberPermissions: ["MANAGE_EMOJIS"],
   async execute(bot, message, args) {
     const emoji = args[0];
-    if (!emoji) return message.channel.send("Please Give Me A Emoji!");
+    if (!emoji) return message.channel.send("¡Por favor dame un emoji!");
 
     let customemoji = Discord.Util.parseEmoji(emoji);
 
@@ -29,7 +29,7 @@ module.exports = {
         .setTitle("Emoji Added")
         .setColor("BLUE")
         .setDescription(
-          `Emoji Has Been Added! | Name : ${
+          `¡Se han agregado emojis! | Name : ${
             name || `${customemoji.name}`
           } | Preview : [Click Me](${Link})`
         );
@@ -37,9 +37,9 @@ module.exports = {
     } else {
       let CheckEmoji = parse(emoji, { assetType: "png" });
       if (!CheckEmoji[0])
-        return message.channel.send("Please Give Me A Valid Emoji!");
+        return message.channel.send("¡Por favor dame un emoji válido!");
       message.channel.send(
-        "You Can Use Normal Emoji Without Adding In Server!"
+        "¡Puedes usar emojis normales sin agregar un servidor!"
       );
     }
   },
