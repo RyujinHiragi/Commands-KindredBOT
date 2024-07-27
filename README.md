@@ -62,10 +62,3 @@ Contacto
 Si tienes alguna pregunta o necesitas ayuda, no dudes en abrir un issue en este repositorio o contactar con el equipo de soporte.
 
 ¡Gracias por tu interés en KindredBot!
-
-css
-Copiar código
-
-Este README en formato Markdown debería ser fácil de leer y seguir. Si necesitas alguna modificación o adición, avísame.
-
-
