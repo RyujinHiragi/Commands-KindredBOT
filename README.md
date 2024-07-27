@@ -1,27 +1,34 @@
-KindredBot Commands Repository
-¡Bienvenido al repositorio de comandos para KindredBot! Este repositorio contiene todos los comandos que utiliza nuestro bot.
+# KindredBot Commands Repository
 
-Descripción
-KindredBot es un bot creado con Node.js que ofrece una variedad de funcionalidades y comandos para interactuar con los usuarios. En este repositorio, encontrarás el código para todos los comandos disponibles para el bot.
+¡Bienvenido al repositorio de comandos para **KindredBot**! Este repositorio contiene todos los comandos que utiliza nuestro bot.
 
-Estado de los Comandos
-Actualmente, algunos comandos en este repositorio están desactualizados y requieren una actualización. Estamos trabajando para poner al día todos los comandos y mejorar el rendimiento del bot, pero si encuentras algún comando que no funciona como se espera, es posible que sea uno de los que necesitan actualizarse.
+## Descripción
 
-Estructura del Repositorio
-commands/: Carpeta que contiene los archivos de código para cada comando individual.
-utils/: Funciones auxiliares y utilidades que los comandos pueden utilizar.
-config/: Configuración y ajustes del bot.
-Requisitos
+**KindredBot** es un bot creado con Node.js que ofrece una variedad de funcionalidades y comandos para interactuar con los usuarios. En este repositorio, encontrarás el código para todos los comandos disponibles para el bot.
+
+## Estado de los Comandos
+
+Actualmente, algunos comandos en este repositorio están **desactualizados** y requieren una actualización. Estamos trabajando para poner al día todos los comandos y mejorar el rendimiento del bot, pero si encuentras algún comando que no funciona como se espera, es posible que sea uno de los que necesitan actualizarse.
+
+## Estructura del Repositorio
+
+- `commands/`: Carpeta que contiene los archivos de código para cada comando individual.
+- `utils/`: Funciones auxiliares y utilidades que los comandos pueden utilizar.
+- `config/`: Configuración y ajustes del bot.
+
+## Requisitos
+
 Para ejecutar este bot, necesitarás:
 
-Node.js (recomendado: la última versión LTS)
-NPM o Yarn para manejar las dependencias
-Instalación
-Clona el repositorio:
+- Node.js (recomendado: la última versión LTS)
+- NPM o Yarn para manejar las dependencias
 
-bash
-Copiar código
-git clone https://github.com/tu_usuario/kindredbot-commands.git
+## Instalación
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu_usuario/kindredbot-commands.git
 Navega al directorio del repositorio:
 
 bash
@@ -55,3 +62,10 @@ Contacto
 Si tienes alguna pregunta o necesitas ayuda, no dudes en abrir un issue en este repositorio o contactar con el equipo de soporte.
 
 ¡Gracias por tu interés en KindredBot!
+
+css
+Copiar código
+
+Este README en formato Markdown debería ser fácil de leer y seguir. Si necesitas alguna modificación o adición, avísame.
+
+
