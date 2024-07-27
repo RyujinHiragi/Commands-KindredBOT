@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const figlet = require("figlet"); // MAKE SURE TO INSTALL FIGLET PACKAGE OR CODE WONT WORK
+const figlet = require("figlet"); 
 
 module.exports = {
     name: "ascii",
@@ -17,7 +17,7 @@ return message.channel.send(`Please provide text for the ascii conversion!`)
 if(text.length > 20) {
 return message.channel.send(`Please put text that has 20 characters or less because the conversion won't be good!`)
 }
- // AGAIN, MAKE SURE TO INSTALL FIGLET PACKAGE!  
+        
 figlet(text, function(err, data) {
 message.channel.send(data, {
 code: 'AsciiArt' 
